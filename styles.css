@@ -1,7 +1,23 @@
 
 
+h1 {
+	font-family: courier;
+
+}
+
+
 .tweets {
 	font-style: normal;
 	font-family: helvetica, sans-serif;
+	
+
+}
+
+.user {
+	color: blue;
+}
+
+button {
+	background-color: violet;
 
 }
