@@ -1,7 +1,18 @@
 
 
+body{
+  	background: url("images/cloud-6.jpg") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
 h1 {
 	font-family: courier;
+	text-align: center;
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em
 
 }
 
@@ -9,7 +20,13 @@ h1 {
 .tweets {
 	font-style: normal;
 	font-family: helvetica, sans-serif;
-	
+	background-color: white;
+	width: 600px ;
+  	margin-left: auto ;
+  	margin-right: auto ;
+	text-align: center;
+	border-radius: 25px;
+	padding-top: 10px;
 
 }
 
@@ -17,7 +34,72 @@ h1 {
 	color: blue;
 }
 
-button {
-	background-color: violet;
+.time {
+	color: green;
 
 }
+
+.message {
+	color: gray;
+
+}
+
+.writeTweet {
+	display:block; /* change this from inline-block */
+    margin:0 auto; /* this will center  it */
+    width: 400px;
+    height: 80px;
+    border-radius: 25px;
+    border: none;
+}
+
+
+
+.submitTweet, button {
+	display:block; /* change this from inline-block */
+    margin:0 auto; /* this will center  it */
+	-moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	-webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b5bcc9), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #b5bcc9 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #b5bcc9 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #b5bcc9 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #b5bcc9 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #b5bcc9 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b5bcc9', endColorstr='#476e9e',GradientType=0);
+	background-color:#b5bcc9;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.submitTweet:hover, button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #b5bcc9));
+	background:-moz-linear-gradient(top, #476e9e 5%, #b5bcc9 100%);
+	background:-webkit-linear-gradient(top, #476e9e 5%, #b5bcc9 100%);
+	background:-o-linear-gradient(top, #476e9e 5%, #b5bcc9 100%);
+	background:-ms-linear-gradient(top, #476e9e 5%, #b5bcc9 100%);
+	background:linear-gradient(to bottom, #476e9e 5%, #b5bcc9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#b5bcc9',GradientType=0);
+	background-color:#476e9e;
+}
+.submitTweet:hover, button:active {
+	position:relative;
+	top:2px;
+}
+
+.submitTweet {
+	font-size: 17px;
+	padding: 8px 15px;
+
+}
+
+
