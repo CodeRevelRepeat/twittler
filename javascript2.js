@@ -1,5 +1,9 @@
-     $(document).ready(function(){
+      
+      //Set up for tweet writing placed outside of (document).ready
+      var visitor = "visitor";
+      streams.users.visitor = [];
 
+     $(document).ready(function(){
 
         var $tweetbody = $('.tweets');
         $tweetbody.html('');
@@ -20,9 +24,9 @@
 
 
         $('button').on('click', function(){
-          var $tweetbody = $('.tweets');
-          $tweetbody.html('');
-          var index = streams.home.length - 1;
+          //var $tweetbody = $('.tweets');
+          $tweetbody = $tweetbody.html('');
+          index = streams.home.length - 1;
           while(index >= 0){
             var tweet = streams.home[index];
             var $tweet = $('<div></div>');
@@ -73,11 +77,16 @@
 
         //Writing a tweet
 
-        var visitor = "visitor";
-        streams.users.visitor = [];
+       // var visitor = "visitor";  Defined above outside of document.ready.
+        //streams.users.visitor = [];  Data structure set up outside of document.ready.
+
         $('.submitTweet').on('click', function(){
+            event.preventDefault();
+            //event.stopPropagation();
             var tweetMessage = $('.writeTweet').val();
             writeTweet(tweetMessage);
+            //$('.writeTweet').val('Tweetle Complete');
+            $('.writeTweet').val('');
         })
 
 
