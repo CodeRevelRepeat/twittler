@@ -12,7 +12,8 @@ h1 {
 	font-family: courier;
 	text-align: center;
 	color: white;
-	text-shadow: black 0.1em 0.1em 0.2em
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-size: 45px;
 
 }
 
@@ -31,11 +32,12 @@ h1 {
 }
 
 .user {
-	color: blue;
+	color: 	#7400FF;
 }
 
 .time {
-	color: green;
+	color: 	#0099FF;
+	font-size: 10pt;
 
 }
 
@@ -48,9 +50,12 @@ h1 {
 	display:block; /* change this from inline-block */
     margin:0 auto; /* this will center  it */
     width: 400px;
-    height: 80px;
+    line-height: 80px;
     border-radius: 25px;
     border: none;
+    font-size: 18px;
+    padding-left: 7px;
+
 }
 
 

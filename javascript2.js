@@ -8,9 +8,9 @@
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
-          $tweet.html('@' + '<span class = "user">' + tweet.user + '</span>' + ': <br>' 
+          $tweet.html('<span class = "user">@' + tweet.user + '</span>' + ': <br>' 
               + '<span class = "message">' + tweet.message + '</span><br>' + 
-             " tweetled " + '<span class = "time">' + moment(tweet.created_at).fromNow() + '</span><br><br>');
+             " " + '<span class = "time">' + moment(tweet.created_at).fromNow() + '</span><br><br>');
           $tweet.appendTo($tweetbody);
           index -= 1;
        
@@ -26,9 +26,9 @@
           while(index >= 0){
             var tweet = streams.home[index];
             var $tweet = $('<div></div>');
-            $tweet.html('@' + '<span class = "user">' + tweet.user + '</span>' + ': <br>' 
+            $tweet.html('<span class = "user">@' + tweet.user + '</span>' + ': <br>' 
               + '<span class = "message">' + tweet.message + '</span><br>' + 
-             " tweetled " + '<span class = "time">' + moment(tweet.created_at).fromNow() + '</span><br><br>');
+             " " + '<span class = "time">' + moment(tweet.created_at).fromNow() + '</span><br><br>');
             $tweet.fadeIn("slow").appendTo($tweetbody);
             index -= 1;
            
