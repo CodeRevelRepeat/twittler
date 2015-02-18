@@ -97,10 +97,13 @@ h1 {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#b5bcc9',GradientType=0);
 	background-color:#476e9e;
 }
-.submitTweet:hover, button:active {
+.submitTweet:active, button:active {
 	position:relative;
-	top:2px;
+	top:8px;
+
 }
+
+
 
 .submitTweet {
 	font-size: 17px;
