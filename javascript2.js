@@ -12,7 +12,7 @@
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
-          $tweet.html('<span class = "user">@' + tweet.user + '</span>' + ': <br>' 
+          $tweet.html('<span id="userSymbol">@</span><span class = "user">' + tweet.user + '</span>' + ': <br>' 
               + '<span class = "message">' + tweet.message + '</span><br>' + 
              " " + '<span class = "time">' + moment(tweet.created_at).fromNow() + '</span><br><br>');
           $tweet.appendTo($tweetbody);
@@ -30,7 +30,7 @@
           while(index >= 0){
             var tweet = streams.home[index];
             var $tweet = $('<div></div>');
-            $tweet.html('<span class = "user">@' + tweet.user + '</span>' + ': <br>' 
+            $tweet.html('<span id="userSymbol">@</span><span class = "user">' + tweet.user + '</span>' + ': <br>' 
               + '<span class = "message">' + tweet.message + '</span><br>' + 
              " " + '<span class = "time">' + moment(tweet.created_at).fromNow() + '</span><br><br>');
             $tweet.fadeIn("slow").appendTo($tweetbody);
@@ -63,14 +63,28 @@
 
 
         //Click on username to see that user's timeline:
+        //Only works when clicking on original tweets rather than refreshed tweets.  
 
         $('.user').on('click', function(event){
-            event.preventDefault();
-            event.stopPropagation();
-            var userName = $(this).data('user');
-            console.log(userName);
-            console.log(streams.users.shawndrost);
+            //event.preventDefault();
+            //event.stopPropagation();
+            var userName = $(this).context.innerText;
+            //console.log($(this));
+            //console.log(userName);
+            console.log(streams.users[userName]);
       
+
+            $tweetbody = $tweetbody.html('');
+            var userIndex = streams.users[userName].length - 1;
+            while(userIndex >= 0){
+              var tweet = streams.users[userName][userIndex];
+              var $tweet = $('<div></div>');
+              $tweet.html('<span id="userSymbol">@</span><span class = "user">' + tweet.user + '</span>' + ': <br>' 
+                + '<span class = "message">' + tweet.message + '</span><br>' + 
+                " " + '<span class = "time">' + moment(tweet.created_at).fromNow() + '</span><br><br>');
+              $tweet.fadeIn("slow").appendTo($tweetbody);
+              userIndex -= 1;
+            }
 
         });
 
